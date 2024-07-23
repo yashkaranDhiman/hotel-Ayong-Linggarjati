@@ -1,0 +1,1002 @@
+{% extends 'base.html' %}
+{% block title %}Ayong Linggarjati{% endblock title %}
+{% load static %}
+{% block CSS %}
+main{
+font-family: 'EB Garamond', serif;
+font-family: 'Inter', sans-serif;
+font-family: 'Roboto', sans-serif;
+}
+.low_opacity{
+opacity: 0.6;
+}
+.low_opacity1{
+display: none;
+opacity: 0.6;
+}
+.img1{
+text-align: center;
+justify-content: center;
+}
+
+.btn2 {
+  margin: 12px;
+  height: 50px;
+  width: 120px;
+  border-radius: 10px;
+  background: #333;
+  justify-content: center;
+  align-items: center;
+  box-shadow: -5px -5px 15px #444, 5px 5px 15px #222, inset 5px 5px 10px #444, inset -5px -5px 10px #222;
+  font-family: 'Damion', cursive;
+  border: none;
+  font-size: 16px;
+  color: rgb(161, 161, 161);
+  transition: 500ms;
+}
+.book-btn{
+  border: none;
+  outline: none;
+  margin-top: 1vw;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background-color: rgb(71, 123, 255);
+  color: white;
+}
+.btn2:hover {
+  box-shadow: -5px -5px 15px #444, 5px 5px 15px #222, inset 5px 5px 10px #222, inset -5px -5px 10px #444;
+  color: #d6d6d6;
+  transition: 500ms;
+}
+/* CSS */
+.btn1 {
+--b: 3px; /* border thickness */
+--s: .45em; /* size of the corner */
+--color: white;
+
+padding: calc(.5em + var(--s)) calc(.9em + var(--s));
+color: var(--color);
+--_p: var(--s);
+background:
+conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--color) 0)
+var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+transition: .3s linear, color 0s, background-color 0s;
+outline: var(--b) solid #0000;
+outline-offset: .6em;
+font-size: 16px;
+
+border: 0;
+
+user-select: none;
+-webkit-user-select: none;
+touch-action: manipulation;
+}
+
+.btn1:hover,
+.btn1:focus-visible{
+--_p: 0px;
+outline-color: var(--color);
+outline-offset: .05em;
+}
+
+.btn1:active {
+background: var(--color);
+color: #fff;
+}
+.img1>.a:hover{
+color: white;
+}
+.img1>a{
+font-weight: 900;
+text-decoration: none;
+}
+.img1>.h3{
+font-size: 4vw;
+margin-top: 15vw;
+}
+.img1>.p{
+font-size: 3vw;
+}
+.img1>.left{
+font-family: 'EB Garamond', serif;
+font-family: 'Inter', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Satisfy', cursive;
+margin: 6px;
+padding: 10px;
+overflow-y: hidden;
+float: left;
+font-size: 3vw;
+}
+.img1>.as{
+float: right;
+font-size: 1.7vw;
+}
+.img1>.call{
+font-size: 2vw;
+}
+.img1>.as>a{
+text-decoration: none;
+color: white;
+margin: 0 23px;
+opacity: 0.9;
+}
+.img1>.as>a:hover{
+opacity: 1;
+}
+form{
+border: 2px solid black;
+border-radius: 10px;
+padding: 2vw;
+}
+.arrows{
+background-color: black;
+}
+.faci{
+font-size: 40px;
+color: black;
+margin-top: 50px;
+}
+.body1{
+font-family: 'EB Garamond', serif;
+font-family: 'Inter', sans-serif;
+}
+.body1>h1{
+font-weight: 900;
+color: black;
+margin-top: 5vw;
+font-size: 48px;
+}
+.hh1{
+margin-top: 4vw;
+font-weight: 700;
+font-size: 50px;
+}
+.abt{
+font-size: 27px;
+}
+.body1>h2{
+font-size: 30px;
+color: black;
+}
+
+.h4s{
+font-weight:600 ;
+line-height: 50px;
+}
+.dini{
+color: black;
+margin-top: 50px;
+}
+
+.rooms>img{
+width: 70vw;
+height: 50vh;
+}
+.bot{
+margin-bottom: 100px;
+}
+.all_bcc{
+background: url("{% static 'bcc.png' %}");
+opacity: 1;
+font-family: 'EB Garamond', serif;
+}
+#deluxe{
+margin-bottom: 4vw;
+}
+#smoking{
+margin-top: 4vw;
+}
+.top_room{
+display: flex;
+justify-content: center;
+font-size: 70px;
+font-weight: 800;
+margin-top: 5vw;
+}
+.rooms h1{
+font-size: 46px;
+color: black;
+overflow-y: hidden;
+font-weight: 700;
+}
+.bigt{
+font-size: 33px;
+overflow: hidden;
+}
+.bigp{
+font-size: 23px;
+}
+
+
+
+
+.footer-dark{
+background-color: #fff;
+}
+
+.footer-dark{
+background-color: rgb( 40, 45, 50);
+color: white;
+padding: 50px;
+}
+
+.footer-dark h3 {
+margin-top:0;
+margin-bottom:12px;
+font-weight:bold;
+font-size:16px;
+}
+
+.footer-dark ul {
+padding:0;
+list-style:none;
+line-height:1.6;
+font-size:14px;
+margin-bottom:0;
+}
+
+.footer-dark ul {
+color:inherit;
+text-decoration:none;
+opacity:0.6;
+}
+
+.footer-dark ul a:hover {
+opacity:0.8;
+}
+.footer-dark social a:hover {
+opacity:0.8;
+}
+.container1 {
+width: 100%;
+color: white;
+display: flex;
+align-items: center;
+flex-direction: column;
+justify-content: center;
+background-color: #090921;
+}
+.container1 h2{
+font-size: 40px;
+margin-top: 20px;
+overflow-y: hidden;
+}
+
+h2 {
+font-size: 2rem;
+margin-bottom: 1rem;
+text-align: center;
+}
+
+.description {
+text-align: center;
+width: 43%;
+}
+
+.clientImage {
+display: flex;
+flex-direction: row;
+align-items: center;
+}
+
+.clientImage span {
+margin-left: 10px;
+}
+
+.clientImage img {
+width: 40px;
+}
+
+.reviewSection {
+padding: 1rem;
+display: flex;
+flex-wrap: wrap;
+align-items: center;
+justify-content: space-around;
+}
+
+.reviewItem {
+width: 300px;
+padding: 10px;
+margin: 1rem;
+cursor: pointer;
+border-radius: 10px;
+background-color: #10102a;
+border: 1px solid #10102a;
+transition: all .2s linear;
+}
+
+.reviewItem:hover {
+border-color: aqua;
+transform: scale(1.01);
+background-color: #090921;
+box-shadow: 0 0px 5px 0px #cbc0c0;
+}
+
+.top {
+margin-bottom: 1rem;
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: space-between;
+}
+
+.top ul {
+display: flex;
+list-style: none;
+}
+
+.top ul li {
+padding-left: 4px;
+}
+
+article p {
+font-size: 15px;
+font-weight: 100;
+margin-bottom: 1rem;
+font-family: system-ui;
+}
+
+
+@media screen and (max-width:700px) {
+.container1 {
+height: auto;
+}
+
+.description {
+width: 90%;
+}
+}
+
+@media screen and (max-width:375px) {
+.reviewSection {
+padding: 0;
+}
+
+.reviewItem {
+width: 100%;
+}
+
+.clientImage {
+margin-bottom: 0.6rem;
+}
+
+.top {
+align-items: center;
+flex-direction: column;
+justify-content: center;
+}
+}
+@media (max-width:767px) {
+.footer-dark .item:not(.social) {
+text-align:center;
+padding-bottom:20px;
+}
+}
+
+.footer-dark .item.text {
+margin-bottom:36px;
+}
+
+@media (max-width:767px) {
+.footer-dark .item.text {
+margin-bottom:0;
+}
+}
+
+.footer-dark .item.text p {
+opacity:0.6;
+margin-bottom:0;
+}
+
+.footer-dark .item.social {
+text-align:center;
+}
+
+@media (max-width:991px) {
+.footer-dark .item.social {
+text-align:center;
+margin-top:20px;
+}
+.top_room{
+font-size: 4vw;
+}
+.rooms h1{
+font-size: 2.8vw;
+}
+.bigt{
+font-size: 2.4vw;
+}
+.bigp{
+font-size: 2vw;
+}
+}
+
+.footer-dark .item.social > a {
+font-size:20px;
+width:36px;
+height:36px;
+line-height:36px;
+display:inline-block;
+text-align:center;
+border-radius:50%;
+box-shadow:0 0 0 1px rgba(255,255,255,0.4);
+margin:0 8px;
+color:#fff;
+opacity:0.75;
+}
+
+.footer-dark .item.social > aer {
+background-color: white;
+color: white;
+opacity: 0.1;
+}
+
+.footer-dark .copyright {
+text-align:center;
+padding-top:24px;
+opacity:0.3;
+bottom: 0;
+font-size:13px;
+margin-bottom:0;
+}
+.grid_img{
+display:flex;
+margin: auto;
+transition: .5s ease;
+justify-content: center;
+}
+.grid_img img{
+font-family: Montserrat, sans-serif;;
+color: #009688;
+padding: 30px;
+box-shadow:
+inset navy 0 0 0 5px,
+inset #059c8e 0 0 0 1px,
+inset #0cab9c 0 0 0 10px,
+inset #1fbdae 0 0 0 11px,
+inset #8ce9ff 0 0 0 16px,
+inset #48e4d6 0 0 0 17px,
+inset #e5f9f7 0 0 0 21px,
+inset #bfecf7 0 0 0 22px;
+text-shadow: 3px 3px 1px #bfecf7;
+margin:6vw 20px;
+
+}
+
+.grid_img img{
+cursor: pointer;
+}
+@keyframes images_hover{
+from{
+box-shadow: 0 0 0 5px #009688;
+}
+to{
+box-shadow: 0 0 0 10px navy;
+}
+}
+
+@media (max-width: 900px){
+.grid_img{
+display:block;
+margin: auto;
+/* justify-content: center; */
+}
+.grid_img img{
+margin: 4vw;
+width: 90%;
+}
+.img1 h3{
+font-size: large;
+}
+}
+@media (max-width: 650px){
+.img1.a{
+width: 30px;
+}
+.img1 .left{
+font-size: 5vw;
+}
+}
+@media (max-width: 550px){
+.img1>p{
+font-size: 3vw;
+}
+.img1>h3{
+font-size: 2vw;
+}
+.low_opacity1{
+display: block;
+}
+.low_opacity{
+display: none;
+}
+.img1 .h3{
+margin-top: 100vw;
+}
+}
+@media (max-width: 700px){
+.top_room{
+font-size: 5vw;
+}
+.rooms h1{
+font-size: 3.8vw;
+}
+.bigt{
+font-size: 3.4vw;
+}
+.bigp{
+font-size: 3vw;
+}
+.img1 .phn{
+display: none;
+}
+.img1>.as{
+float: right;
+font-size: 2.2vw;
+}
+.img1 .h3{
+margin-top: 20vw;
+}
+.img1 .p{
+font-size: 3vw;
+}
+}
+@media (max-width: 450px){
+.top_room{
+font-size: 7vw;
+}
+.rooms h1{
+font-size: 5.8vw;
+}
+.bigt{
+font-size: 6vw;
+font-weight: 900;
+}
+.bigp{
+font-size: 5vw;
+}
+.img1>.left{
+margin: 0px;
+}
+}
+@media (max-width: 500px){
+.h4s{
+line-height: 1.4em;
+}
+.faci{
+font-weight: 700;
+}
+.dini{
+font-weight: 700;
+}
+.img1>.as>a{
+font-size: 3vw;
+margin: 0 12px;
+}
+.img1 .left{
+font-size: 5vw;
+}
+.img1 .h3{
+margin-top: 25vw;
+}
+}
+
+
+.disb2 h1{
+font-size: 5vw;
+}
+.disb2 svg{
+display: inline;
+}
+#cont{
+cursor: pointer;
+}
+#cont2{
+display: none;
+cursor: pointer;
+}
+
+
+{% endblock CSS %}
+{% load static %}
+
+{% block body %}
+<main>
+  <div class="card bg-dark text-white">
+    <img src="{% static 'image1.jpg' %}" class="low_opacity card-img" alt="...">
+    <img src="{% static 'image0.jpg' %}" class="low_opacity1 card-img" alt="...">
+    <div class="card-img-overlay img1">
+      <!-- additional -->
+      <h3 class="card-title left" data-aos="fade-right">Ayong Linggarjati</h3>
+      <p class="card-text my-3 as"><a href="#about">About</a></p>
+      <p class="card-text my-3 as"><a href="#footer">Contact</a></p>
+      <p class="card-text my-3 as"><a href="/">Home</a></p>
+      <h3 class="card-text my-3 phn" data-aos="fade-down" data-aos-delay="1000"><svg xmlns="http://www.w3.org/2000/svg"
+          width="24" height="24" fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
+          <path
+            d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+        </svg> &nbsp;085 624 101 694</h3>
+      <h3 class="card-title h3" data-aos-delay="600" data-aos="zoom-in-up">Want to stay in ?</h3>
+      <p class="card-text my-3 p" data-aos-delay="600" data-aos="zoom-in-up">Check in now</p>
+      <a href="#form" class="btn1 my-2 a">Check in</a>
+    </div>
+  </div>
+  <br>
+  <br>
+  <div class="top_room">Rooms Available</div>
+  <br>
+
+  <div class="album py-5 bg-light">
+    <div class="container ">
+      <h1>Deluxe Rooms</h1>
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="{% static 'd1.jpg' %}" alt="">
+            <div class="card-body">
+              <p class="card-text">Our deluxe rooms offer an oasis of opulence, where modern design meets timeless
+                comfort. Enjoy spacious accommodations, a plush king-sized bed, and a private balcony with breathtaking
+                views. Indulge in a spa-like bathroom, complete with a deep soaking tub, rain shower, and premium
+                amenities. Your stay promises relaxation and rejuvenation in style</p>
+              <div class="d-flex justify-content-between align-items-center">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="{% static 'd2.jpg' %}" alt="">
+            <div class="card-body">
+              <p class="card-text">Step into a world of sophistication in our deluxe rooms. Immerse yourself in the
+                sumptuous surroundings featuring bespoke furnishings and elegant decor. Unwind on a luxurious
+                queen-sized bed and savor the cityscape views from your panoramic windows. A well-appointed workspace,
+                smart TV, and complimentary minibar complete the experience, ensuring a blend of productivity and
+                leisure.</p>
+              <div class="d-flex justify-content-between align-items-center">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="{% static 'd3.jpg' %}" alt="">
+            <div class="card-body">
+              <p class="card-text">Our deluxe rooms beckon with coastal charm and tranquility. These thoughtfully
+                designed spaces showcase coastal-inspired decor and provide direct access to a private balcony
+                overlooking the pristine beach. Sink into a comfortable king-sized bed after a day of sun and surf, or
+                refresh in the rainforest shower. Your seaside getaway awaits, offering the perfect balance of
+                relaxation and adventure.</p>
+              <div class="d-flex justify-content-between align-items-center">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="album py-5 bg-light">
+        <div class="container">
+          <h1>Family Rooms</h1>
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            <div class="col">
+              <div class="card shadow-sm">
+                <img src="{% static 'f1.jpg' %}" alt="">
+                <div class="card-body">
+                  <p class="card-text">Our family room is designed to provide the ultimate comfort and relaxation for
+                    your family getaway. With spacious interiors and plush furnishings, you'll feel right at home. Enjoy
+                    quality time together in a warm and inviting atmosphere, complete with modern amenities to make your
+                    stay unforgettable.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <img src="{% static 'f2.jpg' %}" alt="">
+                <div class="card-body">
+                  <p class="card-text">Our family room is designed to provide the ultimate comfort and relaxation for
+                    your family getaway. With spacious interiors and plush furnishings, you'll feel right at home. Enjoy
+                    quality time together in a warm and inviting atmosphere, complete with modern amenities to make your
+                    stay unforgettable.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <img src="{% static 'f3.jpg' %}" alt="">
+                <div class="card-body">
+                  <p class="card-text">Our family room is designed to provide the ultimate comfort and relaxation for
+                    your family getaway. With spacious interiors and plush furnishings, you'll feel right at home. Enjoy
+                    quality time together in a warm and inviting atmosphere, complete with modern amenities to make your
+                    stay unforgettable.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <img src="{% static 'f4.jpg' %}" alt="">
+                <div class="card-body">
+                  <p class="card-text">Experience the perfect blend of style and functionality in our family room.
+                    Whether you're traveling with kids or just want extra space to unwind, this room is ideal. Enjoy a
+                    separate living area for added privacy, and let your family create lasting memories in a welcoming
+                    and vibrant setting</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="album py-5 bg-light">
+        <div class="container">
+          <h1>Smoking Rooms</h1>
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            <div class="col">
+              <div class="card shadow-sm">
+                <img src="{% static 's1.jpg' %}" alt="" height="280px">
+                <div class="card-body">
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                    additional content. This content is a little bit longer.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <img src="{% static 's3.jpg' %}" alt="">
+                <div class="card-body">
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                    additional content. This content is a little bit longer.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <img src="{% static 's2.jpg' %}" alt="">
+                <div class="card-body">
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                    additional content. This content is a little bit longer.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <br>
+          <br>
+          <br>
+
+
+          <div class="disb">
+            <div class="container" id="form">
+              <h1 class="my-5">Fill this form to book room</h1>
+              <form id="form" action="/" method="post">{% csrf_token %}
+                <div class="mb-3">
+                  <label for="name" class="form-label">Name</label>
+                  <input type="text" class="form-control" id="name" name="name" required>
+                </div>
+
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email address</label>
+                  <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+
+                <div class="mb-3">
+                  <label for="phone" class="form-label">Contact number</label>
+                  <input type="tel" class="form-control" id="phone" name="phone" required>
+                </div>
+                <label for="room" class="my-2">Room type</label>
+                <select class="form-select" name="room" id="room" aria-label="Default select example">
+                  <option value="Deluxe" selected>Deluxe</option>
+                  <option value="Family">Family</option>
+                  <option value="Smoking">Smoking</option>
+
+                </select>
+                <label for="people" class="my-2">Number of people</label>
+                <select class="form-select" name="people" id="people" aria-label="Default select example">
+                  <option value="1" selected>One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                  <option value="4">Four</option>
+                  <option value="5">Five</option>
+                  <option value="6">Six</option>
+                  <option value="7">Seven</option>
+                  <option value="8">Eight</option>
+                  <option value="9">Nine</option>
+                </select>
+                <button class="book-btn" type="submit">Book Now</button>
+              </form>
+            </div>
+          </div>
+          <div class="grid_img">
+            <img src="{% static 'image2.jpg' %}" width="40%" alt="">
+            <img src="{% static 'image3.jpg' %}" width="40%" alt="">
+          </div>
+          <hr>
+
+
+<!-- bootstrap reviews -->
+<div class="container marketing">
+  <h1>Our Facilities : </h1>
+  <!-- START THE FEATURETTES -->
+
+  <hr class="featurette-divider">
+
+  <div class="row featurette">
+    <div class="col-md-7">
+      <h2 class="featurette-heading">"Delightful Dining at Ayong Linggarjati: Elevate Your Taste Experience"</h2>
+      <p class="lead">Indulge in a culinary journey like no other at our exquisite hotel. Our restaurant offers a diverse and delectable menu that caters to every palate, from gourmet enthusiasts to health-conscious diners. Our talented chefs use only the freshest, locally sourced ingredients to craft dishes that are not only visually appealing but also bursting with flavor. Whether you're savoring a sumptuous breakfast, enjoying a leisurely lunch, or experiencing an elegant dinner, our food promises to tantalize your taste buds and leave you craving for more. With a welcoming ambiance and impeccable service, dining at our hotel is an unforgettable gastronomic experience that will leave you coming back for seconds.</p>
+    </div>
+    <div class="col-md-5">
+      <img src="{% static 'food.jpg' %}" width="500px" height="500px" data-aos="slide-left" alt="">
+    </div>
+  </div>
+
+  <hr class="featurette-divider">
+
+  <div class="row featurette">
+    <div class="col-md-7 order-md-2">
+      <h2 class="featurette-heading">"Discover Elegance: A Guide to Our Exquisite Furniture Collection"</h2>
+      <p class="lead">Welcome to our hotel, where comfort and elegance meet in our thoughtfully designed furniture. Our wooden chairs provide a warm and inviting atmosphere, ensuring your relaxation and convenience. You'll find the utmost comfort in our high-quality beds, promising a restful night's sleep. Our stylish tables add a touch of sophistication to your surroundings, making your stay with us truly memorable. Experience the perfect blend of comfort and aesthetics with our carefully selected furniture at our hotel.</p>
+    </div>
+    <div class="col-md-5 order-md-1">
+      <img src="{% static 'furniture.jpg' %}" width="500px" height="600px" data-aos="slide-right" alt="">
+    </div>
+  </div>
+
+  <hr class="featurette-divider">
+
+  <div class="row featurette">
+    <div class="col-md-7">
+      <h2 class="featurette-heading">"Immerse Yourself in Paradise: Our Oasis of Serenity - The Hotel's Swimming Pool"</h2>
+      <p class="lead">Indulge in relaxation and refreshment at our hotel's inviting swimming pool. Nestled amidst lush tropical landscaping, our pool provides the perfect oasis for both leisure and tranquility. With crystal-clear waters and comfortable lounge chairs, you can bask in the sun, take a refreshing dip, or simply unwind while sipping on your favorite cocktail from our poolside bar. Whether you're here for a family vacation or a romantic getaway, our swimming pool promises a serene escape for all our guest</p>
+    </div>
+    <div class="col-md-5">
+      <img src="{% static 'swim.jpg' %}" width="500px" height="500px" data-aos="slide-left" alt="">
+    </div>
+  </div>
+
+  <hr class="featurette-divider">
+  <br>
+  <br>
+  <br>
+  <br>
+  <!-- /END THE FEATURETTES -->
+</div>
+
+<div class="container1">
+  <h2 class="my-4"> Our Hotel Reviews </h2>
+  <div class="reviewSection">
+
+    {% for review in reviews %}
+    <div class="reviewItem">
+      <div class="top">
+        <div class="clientImage">
+          <img src="/media/{{review.image}}" width="50px" height="50px" class="rounded" alt="">
+          <span>{{review.name}}</span>
+        </div>
+        <ul>
+          {% if review.rating == '5 Star' %}
+          <li><i class="fa-solid fa-star"></i></li>
+          <li><i class="fa-solid fa-star"></i></li>
+          <li><i class="fa-solid fa-star"></i></li>
+          <li><i class="fa-solid fa-star"></i></li>
+          <li><i class="fa-solid fa-star"></i></li>
+          {% endif %}
+          {% if review.rating == '4 Star' %}
+          <li><i class="fa-solid fa-star"></i></li>
+          <li><i class="fa-solid fa-star"></i></li>
+          <li><i class="fa-solid fa-star"></i></li>
+          <li><i class="fa-solid fa-star"></i></li>
+          <li><i class="fa-regular fa-star"></i></li>
+          {% endif %}
+          {% if review.rating == '3 Star' %}
+          <li><i class="fa-solid fa-star"></i></li>
+          <li><i class="fa-solid fa-star"></i></li>
+          <li><i class="fa-solid fa-star"></i></li>
+          <li><i class="fa-regular fa-star"></i></li>
+          <li><i class="fa-regular fa-star"></i></li>
+          {% endif %}
+          {% if review.rating == '2 Star' %}
+          <li><i class="fa-solid fa-star"></i></li>
+          <li><i class="fa-solid fa-star"></i></li>
+          <li><i class="fa-regular fa-star"></i></li>
+          <li><i class="fa-regular fa-star"></i></li>
+          <li><i class="fa-regular fa-star"></i></li>
+          {% endif %}
+          {% if review.rating == '1 Star' %}
+          <li><i class="fa-solid fa-star"></i></li>
+          <li><i class="fa-regular fa-star"></i></li>
+          <li><i class="fa-regular fa-star"></i></li>
+          <li><i class="fa-regular fa-star"></i></li>
+          <li><i class="fa-regular fa-star"></i></li>
+          {% endif %}
+        </ul>
+      </div>
+      <article>
+        <p class="review">{{review.review}}</p>
+        <p>{{review.timestamp}}</p>
+      </article>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+</div>
+</main>
+
+
+<div class="footer-dark">
+  <footer id="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6 col-md-3 item">
+          <h3>Services</h3>
+          <ul>
+            <p class="my-1">Guaranteed comfort</p>
+            <p class="my-1">Best funrniture</p>
+            <p class="my-1">Couple friendly environment</p>
+            <p class="my-1">Rooms always available</p>
+            <p class="my-1">Deluxe rooms</p>
+            <p class="my-1">Family rooms</p>
+            <p class="my-1">Smoking rooms</p>
+          </ul>
+        </div>
+        <div class="col-sm-6 col-md-3 item">
+          <h3>About</h3>
+          <ul>
+            <p class="my-1">Owner - MUHAMMAD ROBBY SUPARSYAH</p>
+            <p class="my-1">Email - linggarjatihotelayong@gmail.com</p>
+            <p class="my-1">Call at - 085 624 101 694</p>
+          </ul>
+        </div>
+        <div class="col-md-6 item text">
+          <h3>Hotel Ayong Linggarjati</h3>
+          <p>Discover unparalleled comfort and hospitality at Hotel Ayong Linggarjati, where luxury meets convenience.
+            Nestled in the heart of people, our hotel offers a haven of tranquility for travelers seeking a memorable
+            stay.</p>
+          <p class="my-2">Situated at kawasan Wisata Linggarjati, Jl. Linggarjati No.14, Cilimus, Linggasana, Kuningan,
+            Kabupaten Kuningan, Jawa Barat 45556. We provide easy access to the city's cultural, culinary, and
+            entertainment hotspots.</p>
+        </div>
+        <div class="col item social">
+          <a href="https://www.facebook.com/profile.php?id=100086217156388"><i class="fa fa-facebook"></i></a>
+
+        </div>
+      </div>
+      <p class="copyright">Website managed and maintained by Gudie Devs | Hotel Ayong Linggarjati © 2023</p>
+    </div>
+  </footer>
+</div>
+{% endblock body %}
+
+{% block js %}
+
+{% endblock js %}
+
+
+<script>
+  let down = document.getElementById("cont")
+  let up = document.getElementById("cont2")
+  let chcek_in_form = document.querySelector(".disb")
+  let disb2 = document.querySelector(".disb2")
+  cont_btn.addEventListener("click", () => {
+    disb2.style.display = "none";
+  })
+
+  // function show(){
+  //   chcek_in_form.style.display = "block";
+  // }
+</script>
+
+
+<!-- laoction = kawasan Wisata Linggarjati, Jl. Linggarjati No.14, Cilimus, Linggasana, Kuningan, Kabupaten Kuningan, Jawa Barat 45556 -->
